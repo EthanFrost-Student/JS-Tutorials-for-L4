@@ -96,7 +96,7 @@ document.getElementById("cart-btn").addEventListener("click", function(){
     }
     else
     {
-        htmldata = UpdateCart();
+        const htmldata = UpdateCart();
         document.getElementById("cart-body").innerHTML = htmldata;
     }
 
