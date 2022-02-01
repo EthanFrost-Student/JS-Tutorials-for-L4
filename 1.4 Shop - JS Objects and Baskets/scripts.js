@@ -44,7 +44,7 @@ document.getElementById("info-btn").addEventListener("click", function(e){
 //SET UP CART FUNCTIONALITY
 let cart = 
 [
-
+    1
 ]
 
 function AddtoCart()
@@ -55,7 +55,19 @@ function AddtoCart()
 //Update the cart
 function UpdateCart()
 {
-    
+    cartHTML = " "
+
+    cartHTML+=  `<div class = "row">
+    <div class = "col-2">    <img class="w-100" src="img/shoe1.jpg">  </div>
+    <div class = "col-4">  Shoe 1  </div>
+    <div class = "col-2">  <input class = "w-100"   type = "number" placeholder="1">     </div>
+    <div class = "col-2"> £ 49.99 </div>
+    <div class = "col-2"> <div class="btn btn-danger">X</div> </div>         
+  </div>`;
+
+  return cartHTML;
+
+
 }
 
 
@@ -77,6 +89,18 @@ items.forEach(item =>{
 var cartModal = new bootstrap.Modal(document.getElementById("cart-modal"));
 
 document.getElementById("cart-btn").addEventListener("click", function(){
+
+    if (cart.length === 0)
+    {
+        document.getElementById("cart-body").innerHTML = "<b>YOUR CART IS EMPTY!</b>"
+    }
+    else
+    {
+        htmldata = UpdateCart();
+        document.getElementById("cart-body").innerHTML = htmldata;
+    }
+
+
      cartModal.show()
 })
 
