@@ -1,31 +1,26 @@
 //define product array
-const products = [
-    "This is info for product 1",
-    "This is info for product 2",
-    "This is info for product 3"
-]
 
-var products1 = [
+const products = [
     {
-        "id":1,
-        "title":"Shoe1",
-        "img":"img/shoe1.jpg",
-        "description":"This is shoe product 1",
-        "price":49.99
+        id:1,
+        title:"Shoe1",
+        img:"img/shoe1.jpg",
+        description:"This is shoe product 1",
+        price:69.99
     },
     {
-        "id":2,
-        "title":"Shoe2",
-        "img":"img/shoe1.jpg",
-        "description":"This is shoe product 1",
-        "price":49.99
+        id:2,
+        title:"Shoe2",
+        img:"img/shoe1.jpg",
+        description:"This is shoe product 22222",
+        price:169.99
     },
     {
-        "id":3,
-        "title":"Shoe3",
-        "img":"img/shoe1.jpg",
-        "description":"This is shoe product 1",
-        "price":49.99
+        id:3,
+        title:"Shoe3",
+        img:"img/shoe1.jpg",
+        description:"This is shoe product 3333333333333",
+        price:59.99
     }
 ]
 
@@ -46,6 +41,23 @@ document.getElementById("info-btn").addEventListener("click", function(e){
 })
 */
 
+//SET UP CART FUNCTIONALITY
+let cart = 
+[
+
+]
+
+function AddtoCart()
+{
+
+}
+
+//Update the cart
+function UpdateCart()
+{
+    
+}
+
 
 //how do I grab all classes with 'more info'?
 //var items = document.getElementsByClassName("more-info");
@@ -56,7 +68,7 @@ console.log(items);
 items.forEach(item =>{
     item.addEventListener("click", function (e){
         console.log(e.target.id);
-        document.getElementById("modal-data").innerHTML = products[e.target.id];
+        document.getElementById("modal-data").innerHTML = products[e.target.id].description;
         infoModal.show()
     })
 });
