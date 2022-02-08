@@ -74,7 +74,9 @@ function UpdateCart()
 //how do I grab all classes with 'more info'?
 //var items = document.getElementsByClassName("more-info");
 const items = document.querySelectorAll(".more-info")
+const AddToCartBtns = document.querySelectorAll(".cart-btn")
 console.log(items);
+console.log(AddToCartBtns);
 
 //attach event listener to every button I find with more info class
 items.forEach(item =>{
